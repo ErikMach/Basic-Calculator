@@ -1,0 +1,99 @@
+html {
+  min-height: 100%;
+  position: relative;
+}
+body {
+  min-height: 100%;
+  top:0;
+  left:0;
+}
+.calculator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+.result {
+  width: calc(100% - 50px);
+  height: calc(40% - 50px);
+  border: 25px solid rgb(127, 219, 255, 0.3);
+}
+#miniresult {
+  position: absolute;
+  right: 30px;
+  top: 3%;
+  text-align: right;
+  opacity: 0.5;
+  margin: 0;
+  border: none;
+  font-size: 5em;
+  transition: 0.2s all;
+  background-color: transparent;
+}
+.visuallyhidden { 
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+#btn:focus ~ #miniresult {
+  width: calc(90% - 5px);
+  height: calc(32.2% - 5px);
+  padding-top: calc(2.95% + 5px);
+  font-size: 10em;
+  padding-right: 7.2%;
+  padding-left: 5%;
+  top: 0;
+  right: 0;
+  opacity: 1;
+}
+#btn:focus + #result {
+  opacity: 0;
+}
+#result {
+  width: 90%;
+  height: 80%;
+  padding-top: 3%;
+  border: none;
+  text-align: right;
+  font-size: 10em;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+.numpad {
+  width: 100%;
+  height: 60%;
+  display:grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.number {
+  font-family: Verdana, sans-serif;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-radius: 50%;
+  background-image: radial-gradient(circle, rgb(127, 219, 255, 0), rgb(127, 219, 255, 0.3));
+  box-shadow: 2px 5px #aaaaaa;
+}
+.number *{
+  padding: 0;
+  margin: 0;
+}
+.number h1 {
+  margin-top: 25%;
+  font-weight: normal;
+  font-size: 5em;
+}
+.number:hover {
+  background-color: rgb(127, 219, 255, 0.1);
+}
+.number:active {
+  box-shadow: 0px 0px #000000;
+}
+#eq {
+  background-image: radial-gradient(circle, rgb(127, 219, 255, 0), rgb(127, 219, 255, 0.7));
+}

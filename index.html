@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+	<title>Simple Calculator (Phone)</title>
+    </head>
+    <body>
+
+<div class="calculator">
+	<div class="result">
+		<button id="btn" class="visuallyhidden"></button>
+		<input id="result" oninput="miniresult(); restrict()" type="text" autofocus/>
+		<input id="miniresult" READONLY/>
+
+	</div>
+	<div class="numpad">
+	<div class="number" onclick=""><h1>H</h1></div>
+	<div class="number" onclick="bcksp();"><h1>Bksp</h1></div>
+	<div class="number" onclick=""><h1></h1></div>
+	<div class="number" onclick=""><h1></h1></div>
+	<div class="number" onclick="clr();"><h1>C</h1></div>
+	<div class="number" onclick="bracket(); miniresult()"><h1>( )</h1></div>
+	<div class="number" onclick="perc();"><h1>%</h1></div>
+	<div class="number" onclick="typad('+')"><h1>+</h1></div>
+	<div class="number" onclick="type(7)"><h1>7</h1></div>
+	<div class="number" onclick="type(8)"><h1>8</h1></div>
+	<div class="number" onclick="type(9)"><h1>9</h1></div>
+	<div class="number" onclick="typad('-')"><h1>&ndash;</h1></div>
+	<div class="number" onclick="type(4)"><h1>4</h1></div>
+	<div class="number" onclick="type(5)"><h1>5</h1></div>
+	<div class="number" onclick="type(6)"><h1>6</h1></div>
+	<div class="number" onclick="typti('*')"><h1>&times;</h1></div>
+	<div class="number" id="yo" onclick="type(1)"><h1>1</h1></div>
+	<div class="number" onclick="type(2)"><h1>2</h1></div>
+	<div class="number" onclick="type(3)"><h1>3</h1></div>
+	<div class="number" onclick="typti('/')"><h1>&div;</h1></div>
+	<div class="number" onclick="neg('-')"><h1>+/-</h1></div>
+	<div class="number" onclick="type(0)"><h1>0</h1></div>
+	<div class="number" onclick="dot('.')"><h1>.</h1></div>
+	<div class="number" id="eq" onclick="supval1()"><h1>=</h1></div>
+	</div>
+</div>
+
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
